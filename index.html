@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clem</title>
+  <meta name="description" content="Demo visual personalizada: una página fluida, estética y hecha a medida para Clem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="page-blur page-blur-one" aria-hidden="true"></div>
+  <div class="page-blur page-blur-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">Clem</a>
+    <div class="top-actions">
+      <button class="circle-btn" id="themeBtn" type="button" aria-label="Cambiar brillo">✦</button>
+      <button class="pill-btn quote-trigger" type="button" data-quote="random">Frase aleatoria</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero section-reveal">
+      <div class="hero-visual tilt-card" data-depth="14">
+        <img src="assets/img/hero-rosa-perlas.webp" alt="Rosa en tonos rojizos con perlas y textura suave" />
+        <div class="hero-vignette"></div>
+      </div>
+
+      <div class="hero-copy">
+        <span class="eyebrow">demo visual personalizada</span>
+        <h1>Clem</h1>
+        <div class="title-line" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="hero-lead">Una experiencia web con estética, movimiento y pequeños detalles pensados para sentirse únicos.</p>
+        <p class="hero-sub">Diseño sitios web con intención: bonitos, fluidos, responsivos y con una identidad clara.</p>
+        <div class="hero-actions">
+          <button class="main-btn quote-trigger" type="button" data-quote="camino">Explorar <span>→</span></button>
+          <button class="ghost-btn" type="button" id="scrollBtn">Ver diseño <span>↓</span></button>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <article class="destination-card card-hover quote-trigger" data-quote="pessoa" tabindex="0" role="button">
+          <img src="assets/img/lisboa-tranvia.webp" alt="Tranvía en una calle inspirada en Lisboa al atardecer" />
+          <div class="card-shade"></div>
+          <div class="card-content">
+            <span class="small-label">postales discretas</span>
+            <h2>Lisboa</h2>
+            <p>Calles que cuentan historias, colores que se quedan.</p>
+            <span class="fake-link">Abrir frase →</span>
+          </div>
+        </article>
+
+        <article class="destination-card compact card-hover quote-trigger" data-quote="suenos" tabindex="0" role="button">
+          <img src="assets/img/rio-atardecer.webp" alt="Bahía cálida al atardecer con montañas y ciudad" />
+          <div class="card-shade"></div>
+          <div class="card-content">
+            <span class="small-label">horizontes cálidos</span>
+            <h2>Mirador</h2>
+            <p>Lugares que abren nuevas perspectivas.</p>
+            <span class="fake-link">Descubrir →</span>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+    <section class="fragments section-reveal" id="diseño">
+      <div class="section-heading">
+        <span></span>
+        <h2>Fragmentos que inspiran</h2>
+        <button class="soft-link quote-trigger" type="button" data-quote="poesia">Ver todos →</button>
+      </div>
+
+      <div class="cards-grid">
+        <article class="fragment-card card-hover quote-trigger" data-quote="rosa" tabindex="0" role="button">
+          <img src="assets/img/rosa-detalle.webp" alt="Detalle de una rosa rojiza" />
+          <div>
+            <h3>Detalles que importan</h3>
+            <p>Pequeños elementos, grandes sensaciones.</p>
+            <span>Ver frase →</span>
+          </div>
+        </article>
+
+        <article class="fragment-card card-hover quote-trigger" data-quote="sorjuana" tabindex="0" role="button">
+          <img src="assets/img/texturas-mediterraneas.webp" alt="Pared con texturas mediterráneas y rosas" />
+          <div>
+            <h3>Texturas que hablan</h3>
+            <p>Patrones, materiales y combinaciones únicas.</p>
+            <span>Ver frase →</span>
+          </div>
+        </article>
+
+        <article class="fragment-card card-hover quote-trigger" data-quote="horizonte" tabindex="0" role="button">
+          <img src="assets/img/playa-atardecer.webp" alt="Playa al atardecer con palmeras" />
+          <div>
+            <h3>Naturaleza que inspira</h3>
+            <p>Colores, luz y calma creativa.</p>
+            <span>Ver frase →</span>
+          </div>
+        </article>
+
+        <article class="fragment-card card-hover quote-trigger" data-quote="musica" tabindex="0" role="button">
+          <img src="assets/img/tocadiscos-nocturno.webp" alt="Tocadiscos vintage en ambiente oscuro" />
+          <div>
+            <h3>Rituales que conectan</h3>
+            <p>Música, silencio y buenos momentos.</p>
+            <span>Ver frase →</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="showcase section-reveal">
+      <article class="music-card card-hover" id="musicCard">
+        <div class="music-head">
+          <img src="assets/img/estudio-verde.webp" alt="Estudio musical con luz verde" />
+          <div>
+            <h3>Sesión creativa</h3>
+            <p id="musicStatus">Ambient demo · Calm · Focus</p>
+          </div>
+          <button class="dots quote-trigger" type="button" data-quote="musica" aria-label="Abrir frase musical">•••</button>
+        </div>
+
+        <div class="wave" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+
+        <ol class="track-list">
+          <li><span>Velvet Dreams</span><b>3:42</b></li>
+          <li><span>City Lights</span><b>2:58</b></li>
+          <li><span>Distant Shores</span><b>4:21</b></li>
+        </ol>
+
+        <div class="player-controls">
+          <button type="button" id="shuffleBtn" aria-label="Efecto aleatorio">⤨</button>
+          <button type="button" id="prevBtn" aria-label="Anterior">◀</button>
+          <button type="button" id="playBtn" class="play-btn" aria-label="Reproducir música">▶</button>
+          <button type="button" id="nextBtn" aria-label="Siguiente">▶</button>
+          <button type="button" id="loopBtn" aria-label="Repetir">↻</button>
+        </div>
+      </article>
+
+      <article class="purpose-card card-hover quote-trigger" data-quote="crear" tabindex="0" role="button">
+        <span class="eyebrow dark">lo que puedo crear</span>
+        <h2>Diseño digital con propósito</h2>
+        <p>Creo experiencias visuales que comunican, conectan y dejan huella. Sitios web que no solo se ven bien, sino que funcionan y cuentan una historia.</p>
+        <div class="mini-features">
+          <span><i>▣</i> Diseño web personalizado</span>
+          <span><i>◎</i> Identidad visual coherente</span>
+          <span><i>◌</i> Experiencia intuitiva</span>
+          <span><i>⌁</i> Animaciones fluidas</span>
+        </div>
+      </article>
+
+      <article class="gallery-card card-hover quote-trigger" data-quote="galeria" tabindex="0" role="button">
+        <div>
+          <h2>Galería</h2>
+          <p>Un vistazo a un universo visual cuidado.</p>
+          <span>Explorar galería →</span>
+        </div>
+        <div class="polaroids" aria-hidden="true">
+          <img src="assets/img/rosa-detalle.webp" alt="" />
+          <img src="assets/img/rio-atardecer.webp" alt="" />
+          <img src="assets/img/texturas-mediterraneas.webp" alt="" />
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" aria-live="polite">
+    <button type="button" id="closeToast" aria-label="Cerrar">×</button>
+    <span id="toastAuthor">Fernando Pessoa</span>
+    <p id="toastText">Todo vale la pena si el alma no es pequeña.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
